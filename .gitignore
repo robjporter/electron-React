@@ -1,0 +1,10 @@
+node_modules
+.vscode
+yarn.lock
+release
+.idea
+.DS_*
+app/build
+app/release
+dist/
+*error.log

@@ -1,0 +1,89 @@
+{
+  "name": "SOFA",
+  "version": "3.0.0",
+  "description": "An Electron app",
+  "license": "MIT",
+  "author": {
+    "name": "Rob Porter",
+    "email": "test@test.com",
+    "url": "https://github.com/robjporter"
+  },
+  "contributors": [
+    "Rob Porter <test@test.com>",
+    "Phil Whiteside <test@test.com"
+  ],
+  "keywords": [
+    "Electron",
+    "JS"
+  ],
+  "homepage": "./",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robjporter/electron-sofa"
+  },
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "compile": "electron-webpack",
+    "dist": "yarn compile && electron-builder",
+    "dist:all": "yarn compile && electron-builder -mwl",
+    "dist:mac": "yarn compile && electron-builder -m",
+    "dist:win": "yarn compile && electron-builder -w",
+    "dist:lin": "yarn compile && electron-builder -l",
+    "dist:dir": "yarn dist --dir -c.compression=store -c.mac.identity=null"
+  },
+  "electronWebpack": {
+    "title": "Title",
+    "main": {
+      "sourceDirectory": "app/main"
+    },
+    "renderer": {
+      "sourceDirectory": "app/renderer"
+    }
+  },
+  "dependencies": {
+    "app-root-path": "^2.1.0",
+    "axios": "^0.18.0",
+    "co": "^4.6.0",
+    "colorette": "^1.0.7",
+    "ejs-loader": "^0.3.1",
+    "electron-is": "^3.0.0",
+    "electron-is-dev": "^1.0.1",
+    "electron-settings": "^3.2.0",
+    "electron-util": "^0.11.0",
+    "eramthgin": "^2.9.3",
+    "react": "^16.8.0",
+    "react-bootstrap": "^1.0.0-beta.5",
+    "react-dom": "^16.7.0",
+    "react-helmet": "^5.2.0",
+    "react-icons": "^3.3.0",
+    "react-router-dom": "^4.3.1",
+    "source-map-support": "^0.5.10",
+    "update-electron-app": "^1.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@types/electron": "^1.6.10",
+    "@types/node": "^10.12.24",
+    "@types/react": "^16.8.1",
+    "@types/react-dom": "^16.0.11",
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "ejs": "^2.6.1",
+    "ejs-html-loader": "^4.0.1",
+    "electron": "^4.0.3",
+    "electron-builder": "^20.38.5",
+    "electron-webpack": "^2.6.2",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.29.3",
+    "webpack-build-notifier": "^0.1.30"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  }
+}
